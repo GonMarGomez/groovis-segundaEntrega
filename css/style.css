@@ -133,7 +133,7 @@ body {
         'sobrenosotrosrectangulo sobrenosotrosrectangulo sobrenosotrosrectangulo'
     ;
     grid-template-columns: 35vw 20vw 30vw;
-    grid-template-rows: 30vh 25vh 15vh 10vh 10vh;
+    grid-template-rows: 30vh 35vh 15vh 10vh 10vh;
     row-gap: 10px;
     column-gap: 5px;
     justify-items: center;
