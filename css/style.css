@@ -107,6 +107,8 @@ body {
     font-size: 40px;
     background-color: #ffdc92;
 }
+.nabvar__color{
+    background-color: #ffdc92 ;}
 
 /**
  *
@@ -450,9 +452,6 @@ body {
         display: none;
     }
 
-    .header__logo {
-        background-color: #f8f9fb;
-    }
 
     .inicioProductos__titulo {
         margin: 0px;
