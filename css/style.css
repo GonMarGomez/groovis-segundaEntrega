@@ -7,6 +7,7 @@
 
 body {
     background-color: #feefcd;
+    font-family: 'Work Sans', sans-serif;
 }
 
 /**
@@ -112,62 +113,38 @@ body {
 
 /**
  *
- *  SECTION INICIO
+ *  INICIO
  * -------------------------------------------------------------------
  */
-.section {
+ .Inicio__presentacion{
+    margin-top: 50px;
+ }
+ .inicio__content{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-
-.inicio {
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-    display: grid;
-    grid-template-areas:
-        'iniciotitulo sobregroovis bienvenidatext'
-        'efectoig sobregroovis bienvenidaboximg'
-        'efectoig sobregroovisimg sobrenosotrostext'
-        'efectoig . sobrenosotrostext2'
-        'sobrenosotrosrectangulo sobrenosotrosrectangulo sobrenosotrosrectangulo'
-    ;
-    grid-template-columns: 35vw 20vw 30vw;
-    grid-template-rows: 30vh 35vh 15vh 10vh 10vh;
-    row-gap: 10px;
-    column-gap: 5px;
-    justify-items: center;
-    align-items: center;
-}
+    justify-content: space-between;
+ }
 
 .inicio__titulo {
-    font-family: 'Work Sans', sans-serif;
-    grid-area: iniciotitulo;
+    margin: 0px;
     display: flex;
-    text-align: left;
+    font-size: 42px;
     align-items: center;
-    font-size: 36px;
-    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
 }
 
 .inicio__efecto-ig {
-    grid-area: efectoig;
     background-color: #f5f5f5;
-    width: 32vw;
-    height: 25vw;
     border: solid black 2px;
     display: inline-block;
-    grid-row-start: 2;
-    grid-row-end: 2;
-
+    max-width: 40vw;
+    max-height: 30vw;
 }
-
 .inicio__imagen {
-    display: flex;
     width: 100%;
-    display: flex;
+    padding: 0px;
 }
 
 .imagen__iconos {
@@ -187,12 +164,16 @@ body {
 }
 
 .fa-heart {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     background-color: #f5f5f5;
 }
-
+.sobreGroovis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 .inicio__sobreGroovis {
-    grid-area: sobregroovis;
     border: solid black 2px;
     background-color: #ffdc92;
     height: 390px;
@@ -202,47 +183,40 @@ body {
     display: flex;
 
 }
-
 .sobreGroovis__text {
-    grid-area: sobregroovistext;
+    padding: 0px;
+    margin: 0px;
     font-weight: 400;
     font-size: 18px;
-    padding: 20px;
-}
-
-.sobreGroovis__img {
-    grid-area: sobregroovisimg;
-    width: auto;
-    height: auto;
-    max-height: 20vh;
-    max-width: 30vw;
-    margin: 0 auto;
-}
-
-.bienvenida__box {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
-.bienvenida__texto {
-    grid-area: bienvenidatext;
-    font-weight: 400;
-    text-align: left;
-    font-size: 16px;
+.sobreGroovis__img{
+    width: auto;
+    height: auto;
+    max-width: 14vw;
+    margin: 0;    
 }
-
+.sobreNosotros__logo {
+    width: auto;
+    height: auto;
+    max-width: 15vw;
+    margin: 0 auto;
+}
 .bienvenida__img {
-    grid-area: bienvenidaboximg;
     width: auto;
     height: auto;
     max-height: 20vh;
     max-width: 30vw;
 
 }
+.sobreNosotros{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-.sobreNosotros__text {
-    grid-area: sobrenosotrostext;
+.sobreNosotros__textBox {
     font-size: 18px;
     background-color: #c0d85c;
     border: solid black 2px;
@@ -252,226 +226,152 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    padding: 30px;
+    margin: 0px;
 }
 
-.sobreNosotros__text2 {
-    grid-area: sobrenosotrostext2;
+.sobreNosotros__text {
     font-weight: 400;
     text-align: left;
     font-size: 16px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .sobreNosotros__rectanguloRosa {
-    grid-area: sobrenosotrosrectangulo;
     background-color: #ffa5c9;
     border: solid 2px black;
-    width: 80vw;
     height: 60px;
     margin-bottom: 102px;
     margin: 0 auto;
+    margin-top: 50px;
 }
-
-.footer {
-    grid-area: footer;
-    margin-top: 6vh;
-    width: 100vw;
-    background-color: #ffdc92;
-    border: solid 1.5px black;
-    display: flex;
-    align-items: center;
-}
-
-.footer__logo {
-    width: auto;
-    height: auto;
-    max-height: 50px;
-    max-width: 50px;
-    background-color: #ffdc92;
-}
-
-@media (max-width: 1028px) {
-    .inicio {
-        grid-template-areas:
-            'iniciotitulo sobregroovis bienvenidatext'
-            'efectoig sobregroovis bienvenidaboximg'
-            '. sobregroovisimg sobrenosotrostext'
-            '. . sobrenosotrostext2'
-            'sobrenosotrosrectangulo sobrenosotrosrectangulo sobrenosotrosrectangulo'
-        ;
-        justify-items: center;
-        row-gap: 20px;
+@media (max-width: 1200px){
+    .sobreGroovis{
+        padding: 0px;
     }
-
-    .inicio__efecto-ig {
-        margin-top: 100px;
-        grid-row-start: 2;
-        grid-row-end: 3;
+    .inicio__sobreGroovis {
+        height: 100px;
+        width: 800px;
     }
-
-    .bienvenida__texto {
-        text-align: left;
-        font-size: 13px;
+    .sobreGroovis__img{
+       max-width: 200px;
+    }
+    .sobreNosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobreNosotros__textBox{
+        width: 800px;
+    }
+    .sobreNosotros__logo{
+        max-width: 200px;
+    }
+    .inicio__efecto-ig{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .fa-play {
+        font-size: 20px;
+        background-color: #f5f5f5;
+    }
+    
+    .fa-stop {
+        font-size: 20px;
+        background-color: #f5f5f5;
+    }
+    
+    .fa-heart {
+        font-size: 20px;
+        background-color: #f5f5f5;
+    }
+    .imagen__iconos{
         padding: 10px;
     }
-
-    .sobreNosotros__text {
-        font-size: 13px;
+    .inicio__content{
+        margin-bottom: 20px;
     }
-
-    .sobreNosotros__text2 {
-        font-size: 14px;
-        margin-left: 30px;
-
-    }
-
-    .bienvenida__img {
-        width: auto;
-        height: auto;
-        max-width: 200px;
-        max-height: 200px;
-    }
-
-    .imagen__iconos {
-        margin: 0px;
-        padding: 5px;
-        gap: 0px;
-
-    }
+ 
 }
 
-@media (max-width: 864px) {
-    .section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header__marcaTitulo {
-        display: none;
-    }
-
-    .fa-shopping-bag {
-        display: none;
-    }
-
-    .headerStyle {
-        justify-content: space-evenly;
-    }
-
-    .nav__elements-element {
-        font-size: 12px;
-        display: flex;
-        max-width: 80px;
-        justify-content: center;
-    }
-
-    .sobreGroovis__img {
-        display: none;
-    }
-
-    .bienvenida__img {
-        display: none;
-    }
-
-    .inicio__efecto-ig {
-        width: 300px;
-    }
-
-    .inicio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .inicio__titulo {
-        margin: 0px;
-        margin-top: 20px;
-        font-size: 3vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        text-align: center;
-    }
-
-    .inicio__efecto-ig {
-        margin-top: 20px;
-        width: 80%;
-        height: 50%;
-
-    }
-
-    .fa-heart {
-        font-size: 3vh;
-    }
-
-    .fa-play {
-        font-size: 3vh;
-    }
-
-    .fa-stop {
-        font-size: 3vh;
-    }
-
-    .inicio__sobreGroovis {
-        height: 10%;
-        width: 80%;
-    }
-
-    .bienvenida__texto {
-        font-size: 16px;
-        max-width: 70%;
-        margin: 0px;
-    }
-
-    .sobreNosotros__text {
-        height: 10%;
-        width: 80%;
-        padding: 20px;
-        font-size: 18px;
-    }
-
-    .sobreNosotros__text2 {
-        font-size: 16px;
-        max-width: 60%;
-        margin: 0px;
-    }
-
-    .sobreNosotros__rectanguloRosa {
-        width: 60%;
-        height: 30px;
-    }
-
+@media (max-width: 800px){
     .navbar {
         display: flex;
 
     }
-
     .headerStyle {
         display: none;
     }
-
-
-    .inicioProductos__titulo {
-        margin: 0px;
-        margin-top: 20px;
-        font-size: 3vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+    .sobreNosotros__text{
+        font-size: 20px;
         text-align: center;
     }
-
+    .sobreNosotros__rectanguloRosa{
+        display: none;
+    }
+    .inicio__sobreGroovis {
+        width: 600px;
+    }
+    .sobreNosotros__textBox{
+        width: 600px;
+    }
+    .inicio__content{
+        margin-bottom: 20px;
+    }
 }
+@media (max-width: 630px){
+    .inicio__sobreGroovis {
+        width: 350px;
+    }
+    .sobreNosotros__textBox{
+        width: 350px;
+    }
+    .inicio__titulo{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .sobreNosotros__text{
+        font-size: 16px;
+    }
+    .inicio__efecto-ig{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .inicio__content{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 350px){
+    .inicio__sobreGroovis {
+        width: 200px;
+    }
+    .sobreNosotros__textBox{
+        width: 200px;
+    }
+    .inicio__titulo{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .sobreNosotros__text{
+        font-size: 10px;
+    }
+    .inicio__efecto-ig{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+}
+
+  
+ 
+
 
 /**
  *
  *  SECTION PRODUCTOS
  * -------------------------------------------------------------------
  */
-
 .inicioProductos {
     display: flex;
     justify-content: center;
@@ -618,5 +518,528 @@ body {
         width: 22vh;
         height: 22vh;
     }
+    .inicioProductos__titulo{
+        margin-top: 20px;
 
+    }
+}
+
+.footer {
+    margin-top: 7vh;
+    background-color: #ffdc92;
+    border: solid 1.5px black;
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo {
+    width: auto;
+    height: auto;
+    max-height: 50px;
+    max-width: 50px;
+    background-color: #ffdc92;
+}
+/**
+ *
+ *  SECTION INFORMACION
+ * -------------------------------------------------------------------
+ */
+ 
+ #Informacion{
+    display: flex;
+    margin: 15px;
+    justify-content: space-around;
+}
+.Informacion__primeraMitad{
+    display: flex;
+    width: 50%;
+    max-height: 500px;
+    margin-top: 70px;
+
+}
+.informacion__primeraMitad-cuidados{
+    background-color:#fea4c7;
+    font-size: 18px;
+    border: solid black 2px;
+    display: flex;
+    width: 900px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13px;
+    margin-right: 40px;
+}
+.informacion__primeraMitad-cuidados-texto{
+    background-color:#fea4c7;
+}
+.informacion__primeraMitad-boxInfo{
+display: flex;
+flex-direction: column;
+gap: 40px;
+justify-content: space-between;
+max-height: 500px;
+}
+.informacion__primeraMitad-boxInfo--boxAmarilla{
+    background-color: #ffdc92;
+    font-size: 15px;
+    font-weight: 400;
+    border: solid black 2px;
+    height: 220px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.informacion__primeraMitad-boxInfo--boxVerde{
+    background-color: #c0d85c;
+    font-size: 15px;
+    font-weight: 400;
+    border: solid black 2px;
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.Informacion__segundaMitad-inicio{
+    display: flex;
+    justify-content: center;
+}
+.Informaciom_segundaMitad__inicio-img{
+    width: 12vw;
+}
+.Informacion__segundaMitad-rectangulos{
+    display: flex;
+    gap: 10px;
+}
+.Informacion__segundaMitad-Titulo{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.informacion__presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Informacion__segundaMitad__titulo-text{
+    font-size:38px ;
+}
+.Informacion__rectanguloVerde{
+background-color: #c0d85c;
+height: 15px;
+width: 80px;
+}
+.Informacion__rectanguloVioleta{
+    background-color: #b68bc1;
+    height: 15px;
+    width: 180px
+}
+.Informacion__segundaMitad-boxInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.Informaciom_segundaMitad__boxInfo-titulo{
+background-color:#b68bc1 ;
+width: 30vw;
+height: 8vw;
+border: solid black 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Informaciom_segundaMitad__boxInfo__titulo-text{
+    background-color:#b68bc1 ;
+    
+}
+.Informacion__segundaMitad__boxInfo-content{
+    background-color: #fea4c7;
+    margin: 20px 0px 20px 10px;
+    width: 30vw;
+    height: 200px;
+    border: solid black 2px;
+    display: flex;
+    align-items: center;
+}
+.Informacion__segundaMitad__boxInfo__content-text{
+font-size: 15px;
+font-weight: 400;
+background-color: #fea4c7;
+text-align: center;
+}
+.Informacion__mitadInferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%
+}
+.Informacion__mitadInfeior-titulo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   height: 80px;
+   background-color: #b68bc1;
+   border: solid black 2px;
+}
+.Informacion__mitadInfeior__titulo-text{
+    background-color: #b68bc1;
+}
+.Informacion__mitadInferior__boxContenedor{
+    display: flex;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.Informacion__mitadInferior__box-textVerde{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #c0d85c;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+    margin: 0px;
+}
+.Informacion__mitadInferior__box-textAmarillo{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #ffdc92;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+}
+/**
+ *
+ *  SECTION CONTACTO
+ * -------------------------------------------------------------------
+ */
+
+ #Contacto{
+    margin: 20px;
+    display: flex;
+    justify-content:space-around ;
+ }
+ .Contacto__primeraMitad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .Contacto__redesSociales-Box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    background-color: #fea4c7;
+    border: solid black 2px;
+    margin-bottom: 84px;
+    margin-top: 50px;
+ }
+ .Contacto__redesSociales__Box-text{
+    background-color: #fea4c7;
+ }
+ .Contacto__redesPresentacion{
+    background-color: #ffdc92;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid black 2px;
+ }
+ .Contacto__redesPresentacion-SocialesIconos{
+    background-color: #ffdc92;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+ }
+ .fa-whatsapp-square{
+    font-size: 60px;
+    background-color: #ffdc92;
+ }
+ .fa-camera-retro{
+    font-size: 60px;
+    background-color: #ffdc92;
+ }
+ .fa-envelope{
+    font-size: 60px;
+    background-color: #ffdc92;
+ }
+
+
+
+ .Contacto__redesPresentacion-SocialesTextBox{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffdc92;
+    gap: 40px;
+ }
+ .Contacto__redesPresentacion-SocialesTextBox-text{
+    background-color: #ffdc92;
+ }
+ .Contacto__Logo{
+    margin-top: 60px;
+    margin-bottom: 58px;
+    text-align: center;
+ }
+ .Contacto__Logo-img{
+    display: flex;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    max-width: 400px;
+ }
+ .Contacto__SegundaMitad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .Contacto__SegundaMitad-tituloBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 75px;
+ }
+ .Contacto__SegundaMitad_imagenTitulo{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    max-height: 10vw;
+    max-width: 12vw;
+    margin-right: 50px;
+    margin-left: 50px;
+ }
+ 
+ .Contacto__SegundaMitad_imagenTitulo-text{
+    font-size: 50px;
+    
+ }
+ .Contacto__contenedores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .Contacto__contenedorVioleta{
+    background-color: #b68bc1;
+    width: 90px;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+ .Contacto__contenedorVerde{
+    background-color:#c0d85c;
+    width: 160px;
+    height: 15px;
+ }
+ .Contacto__consultasBox{
+    margin-top: 40px;
+    width: 700px;
+    height: 100px;
+    background-color: #fea4c7;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+ }
+ .Contacto__consultasText{
+    background-color: #fea4c7;
+ }
+form{
+    background-color:#c0d85c ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 600px;
+    padding: 50px;
+    margin-bottom: 10px;
+    border: solid black 2px;
+    font-size: 18px;
+
+}
+.field{
+    border: solid 2px;
+    padding: 10px;
+    font-size: 16px;
+}
+input, textarea{
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.contactoFieldBox-checkbox-text{
+    margin: 5px;
+    text-align:left;
+}
+.consulta-text{
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.contactoFieldBox-buttom{
+    width: 120px;
+    height: 40px;
+    background-color: #fea4c7;
+    font-weight: bold;
+}
+
+.contactoFieldBox-buttom-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+/**
+ *
+ *  SECTION ENVIOS
+ * -------------------------------------------------------------------
+ */
+ .Envios{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 105px;
+    margin-top: 40px;
+ }
+ .envios__iniciobox{
+    margin-top: 40px;
+ }
+ .Envios__inicio{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    margin-bottom: 80px;
+    justify-content: center;
+ }
+ .Envios__inicio-img{
+    width: 10vw ;
+ }
+
+ .Envios__inicio-titulo{
+    font-size: 48px;
+ }
+ .Envios__contenedores{
+    display: flex;
+ }
+ .Envios__contenedorVerde{
+    background-color: #c0d85c;
+    width: 60px;
+    height: 15px;
+    margin-right: 10px;
+ }
+ .Envios__contenedorVioleta{
+    background-color: #b68bc1;
+    width: 110px;
+    height: 15px;
+ }
+
+ .Envios__primeraParte{
+    display: flex;
+    flex-direction: column;
+ }
+ .Envios__primeraParte-Maps{
+    width: 350px;
+    height: 280px;
+ }
+ .Envios__primeraParte-MapsBoxVerde{
+    width: 360px;
+    height: 290px;
+    background-color: #c0d85c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+    margin-bottom: 20px;
+ }
+ .Envios__primeraParte-MapsBoxAmarillo{
+    width: 360px;
+    height: 290px;
+    background-color:#ffdc92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+}
+.Envios__segundaParte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Envios__segundaParteInfoVioleta{
+    background-color: #b68bc1;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 200px;
+    padding: 5px;
+}
+.Envios__segundaParteInfoAmarilla{
+    background-color: #ffdc92;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 200px;
+    padding: 5px;
+}
+.Envios__segundaParte-textInfo{
+    font-size: 20px;
+}
+.Envios__segundaParte-tituloBox{
+    width: 800px;
+    height: 103px;
+    background-color: #fea4c7;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.segundaParte__titulo{
+    font-size: 24px;
+}
+.Envios__terceraParte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.Envios__terceraParteTituloBox{
+    width: 450px;
+    height: 150px;
+    background-color: #fea4c7;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border: solid black 2px;
+    margin-bottom: 100px;
+}
+
+.Envios__terceraParte__info{
+    width: 550px;
+    height: 300px;
+    background-color: #c0d85c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border: solid black 2px;
+}
+.Envios__terceraParte__info-Text{
+    font-size: 20px;
 }
